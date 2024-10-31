@@ -12,7 +12,7 @@ is_house = (data["Type"] != "F") & (data["Type"] != "O")
 brighton_house_data = data.loc[town_is_brighton & is_house]
 print(brighton_house_data[["Sold_Price", "Building", "Number", "Street", "Type"]].head(3))
 brighton_average = brighton_house_data["Sold_Price"].mean()
-print(f"Average house price in Brighton: {brighton_average.round()}")
+print(f"\nAverage house price in Brighton: {brighton_average.round()}\n")
 
 # Apply this logic to every town:
 data_light = data[["Sold_Price", "Town", "Type"]]
